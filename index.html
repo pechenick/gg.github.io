@@ -3,173 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Document</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=PT+Serif&display=swap" rel="stylesheet">
+    <title>Prechu</title>
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-    <link rel="stylesheet" href="./assets/css/main.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="assets/font/SegoeWPN.woff">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/slider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://github.com/juliangarnier/anime.git"></script>
+    <script>
+    var cssSelector = anime({
+    targets: '#nav',
+    translateY: -250,
+    autoplay:false,
+    duration:2000
+    });
+    $('#navToggle').onclick = cssSelector.restart;</script>
 </head>
 <body>
-<div class="wrapper"></div>
-<section class="hero" id="hero">
-<div class="container">
-<div id="header" class="header">
-    <div class="header__inner" id="headerInner">
-        <div class="logo"><img src="./assets/img/Logo.png" alt="" class="logo__img"></div>
-        <ul class="menu">
-            <li class="menu__item"><a href="#" class="menu__link" data-scroll="#hero">HOME</a></li>
-            <li class="menu__item"><a href="#" class="menu__link" data-scroll="#services">ABOUT</a></li>
-            <li class="menu__item"><a href="#" class="menu__link" data-scroll="#pricing">SERVICES</a></li>
-            <li class="menu__item"><a href="#" class="menu__link" data-scroll="#testimonial">GALLERY</a></li>
-            <li class="menu__item"><a href="#" class="menu__link" data-scroll="#footer">CONTACT</a></li>
-        </ul>
-        <div class="burger"><span class="burger__item">menu</span></div>
-    </div>
-</div>
-<div class="hero__content">
-    <div class="hero__text">
-        <h2 class="hero__title"><span>SELL YOUR</span><br>CAR NOW</h2>
-        <div class="hero__info">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
-    </div>
-    <form action="URL" class="hero__form">
-        <div class="form__title">REQUEST A QUOTE</div>
-        <input type="text" placeholder="Full Name" class="form__inp">
-        <input type="text" placeholder="Email Adress" class="form__inp">
-        <input type="text" placeholder="Phone Number" class="form__inp">
-        <input type="text" placeholder="Country" class="form__inp">
-        <p class="form__text"><input type="checkbox" class="conditions">I accept the terms & conditions</p>
-        <div class="btn"><a href="#" class="btn__link">SEND</a></div>
-    </form>
-</div>
-</div>
-</section>
-<section id="services" class="services">
-<div class="container">
-    <h2 class="services__title"><span>OUR </span>SERVICES</h2>
-    <ul class="services__list">
-        <li class="services__item">
-            <div class="services__pic"><img src="./assets/img/1.png" alt="" class="services__img"></div>
-            <div class="services__info">Making your trip beautiful and easier</div>
-        </li>
-        <li class="services__item">
-            <div class="services__pic"><img src="./assets/img/2.png" alt="" class="services__img"></div>
-            <div class="services__info">Tools to help you succeed tommorow</div>
-        </li>
-        <li class="services__item">
-            <div class="services__pic"><img src="./assets/img/3.png" alt="" class="services__img"></div>
-            <div class="services__info">Ideas that will blow you out the blue.</div>
-        </li>
-        <li class="services__item">
-            <div class="services__pic"><img src="./assets/img/4.png" alt="" class="services__img"></div>
-            <div class="services__info">Navigate your path to beautiful world.</div>
-        </li>
-    </ul>
-</div>
-</section>
-<div class="story">
-<div class="container">
-<div class="story__inner">
-    <div class="story__info">We are in business for over 6 years providing amazing services to client and people love them to the core. View our story to know more.</div>
-    <div class="btn"><a href="#" class="btn__link">OUR STORY</a></div>
-</div>
-</div>
-</div>
-<section id="pricing" class="pricing">
-<div class="container">
-    <h2 class="pricing__title">PRICING</h2>
-    <ul class="pricing__list">
-        <li class="pricing__item">
-            <div class="pricing__card">
-                <div class="card__header">
-                    <div class="card__title">Starter</div>
+    <section class="hero">
+        <div class="container">
+            <div class="header" id="header">
+                <h1 class="logo"><span>Prechu</span><img src="assets/img/logo/logo.png" alt=""></h1>
+                <div class="burger" id="navToggle">
+                    <span class="burger__item">menu</span>
                 </div>
-                <div class="card__price">Free</div>
-                <div class="card__advantages">Free Service</div>
-                <div class="card__advantages">Multiple Accounts</div>
-                <div class="card__advantages">Management No</div>
-                <div class="card__advantages">--</div>
-                <div class="card__advantages">--</div>
-                <div class="card__btn"><a href="#" class="card__link">TRY</a></div>
-            </div>
-        </li>
-        <li class="pricing__item">
-            <div class="pricing__card">
-                <div class="card__header">
-                    <div class="card__tag">Popular</div>
-                    <div class="card__title">Business</div>
-                </div>
-                <div class="card__price">$97</div>
-                <div class="card__advantages">Free Service</div>
-                <div class="card__advantages">Multiple Accounts</div>
-                <div class="card__advantages">Management No</div>
-                <div class="card__advantages">Unlimited Data</div>
-                <div class="card__advantages">--</div>
-                <div class="card__btn"><a href="#" class="card__link">SIGN UP</a></div>
-            </div>
-        </li>
-        <li class="pricing__item">
-            <div class="pricing__card">
-                <div class="card__header">
-                    <div class="card__title">Professional</div>
-                </div>
-                <div class="card__price">$297</div>
-                <div class="card__advantages">Free Service</div>
-                <div class="card__advantages">Multiple Accounts</div>
-                <div class="card__advantages">Management No</div>
-                <div class="card__advantages">Unlimited Data</div>
-                <div class="card__advantages">Whatever You Need</div>
-                <div class="card__btn"><a href="#" class="card__link">SIGN UP</a></div>
-            </div>
-        </li>
-    </ul>
-</div>
-</section>
-<section id="testimonial" class="testimonial">
-<div class="container">
-    <div class="testimonial__inner">
-        <h2 class="testimonial__title">TESTIMONIAL</h2>
-        <ul class="testimonial__list">
-            <li class="testimonial__item">
-                <div class="testimonial__text">
-                    <div class="testimonial__info">I have been involved with this comapny for ages and just want to say this is a great work by designcoon.</div>
-                    <div class="testimonial__user">DJ Bravo - Frequent Travelera</div>
-                </div>
-                <div class="testimonial__pic"><img src="./assets/img/TestimonialGuy.png" alt="" class="testimonial__img"></div>
-            </li>
-            <li class="testimonial__item">
-                <div class="testimonial__text">
-                    <div class="testimonial__info">I have been involved with this comapny for ages and just want to say this is a great work by designcoon.</div>
-                    <div class="testimonial__user">DJ Bravo - Frequent Travelera</div>
-                </div>
-                <div class="testimonial__pic"><img src="./assets/img/TestimonialGuycopy.png" alt="" class="testimonial__img"></div>
-            </li>
-        </ul>
-    </div>
-    <div class="gallery">
-       <div class="gallery__inner">
-            <div class="gallery__title">GALLERY</div>
-            <ul class="gallery__list">
-                <li class="gallery__item"><img src="./assets/img/GalleryPic.png" alt="" class="gallery__img"></li>
-                <li class="gallery__item"><img src="./assets/img/GalleryPic-1.png" alt="" class="gallery__img"></li>
-                <li class="gallery__item"><img src="./assets/img/GalleryPic-2.png" alt="" class="gallery__img"></li>
-                <li class="gallery__item"><img src="./assets/img/GalleryPic-3.png" alt="" class="gallery__img"></li>
-                <li class="gallery__item"><img src="./assets/img/GalleryPic-4.png" alt="" class="gallery__img"></li>
-                <li class="gallery__item"><img src="./assets/img/GalleryPic-5.png" alt="" class="gallery__img"></li>
-            </ul>
-            <div class="gallery__btn">
-                <a href="#" class="gallery__link">VIEW MORE PICTURES</a>
+                <nav class="menu" id="nav">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Home</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Products</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Services</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
-    </div>
-</div>
-</section>
-<footer id="footer" class="footer">
-<div class="container">
-    <div class="copyright">All Rights Reserved |  2016  |  Designed with love by <span>DesignCoon</span></div>
-    <div class="footer__logo"><img src="./assets/img/Logo%20copy.png" alt="" class="footer__img"></div>
-</div>
-</footer>
-<script src="./assets/js/script.js"></script>
+        <div class="slider">
+            <div class="slider__wrapper">
+              <div class="slider__item">
+                <img src="assets/img/bg/dsfsdfsdfds.png" alt="" class="banner">
+                <div class="slider__pic">
+                    <img src="assets/img/iphone.png" alt="" class="slider__img">
+                </div>
+                <div class="slider__text">
+                    <div class="slider__title">Lorem Ipsum is simply </div>
+                    <div class="slider__info">dummy text of the <br>printing & typesetting </div>
+                    <div class="slider__btn">
+                        <a href="#" class="slider__link">Sign up now</a>
+                    </div>
+                </div>
+              </div>
+              <div class="slider__item">
+                <img src="assets/img/bg/dsfsdfsdfds.png" alt="" class="banner">
+                <div class="slider__pic">
+                    <img src="assets/img/iphone.png" alt="" class="slider__img">
+                </div>
+                <div class="slider__text">
+                    <div class="slider__title">Lorem Ipsum is simply </div>
+                    <div class="slider__info">dummy text of the <br>printing & typesetting </div>
+                    <div class="slider__btn">
+                        <a href="#" class="slider__link">Sign up now</a>
+                    </div>
+                </div>
+              </div>
+              <div class="slider__item">
+                <img src="assets/img/bg/dsfsdfsdfds.png" alt="" class="banner">
+                <div class="slider__pic">
+                    <img src="assets/img/iphone.png" alt="" class="slider__img">
+                </div>
+                <div class="slider__text">
+                    <div class="slider__title">Lorem Ipsum is simply </div>
+                    <div class="slider__info">dummy text of the <br>printing & typesetting </div>
+                    <div class="slider__btn">
+                        <a href="#" class="slider__link">Sign up now</a>
+                    </div>
+                </div>
+              </div>
+              <div class="slider__item">
+                <img src="assets/img/bg/dsfsdfsdfds.png" alt="" class="banner">
+                <div class="slider__pic">
+                    <img src="assets/img/iphone.png" alt="" class="slider__img">
+                </div>
+                <div class="slider__text">
+                    <div class="slider__title">Lorem Ipsum is simply </div>
+                    <div class="slider__info">dummy text of the <br>printing & typesetting </div>
+                    <div class="slider__btn">
+                        <a href="#" class="slider__link">Sign up now</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <a class="slider__control slider__control_left" href="#" role="button"></a>
+            <a class="slider__control slider__control_right" href="#" role="button"></a>
+        </div>
+<!--
+        <div class="slider__show-container">
+            <div class="mySlides fade">
+                <img src="assets/img/bg/dsfsdfsdfds.png" alt="" class="banner">
+                <img src="./assets/img/iphone.png" alt="" class="slider__img">
+                <div class="slider__text">
+                    <div class="slider__title">Lorem Ipsum is simply </div>
+                    <div class="slider__info">dummy text of the <br>printing & typesetting </div>
+                    <div class="slider__btn">
+                        <a href="#" class="slider__link">Sign up now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides fade">
+                <img src="assets/img/bg/dsfsdfsdfds.png" alt="" class="banner">
+                <img src="./assets/img/iphone.png" alt="" class="slider__img">
+                <div class="slider__text">
+                    <div class="slider__title">Lorem Ipsum is simply </div>
+                    <div class="slider__info">dummy text of the <br>printing & typesetting </div>
+                    <div class="slider__btn">
+                        <a href="#" class="slider__link">Sign up now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides fade">
+                <img src="assets/img/bg/dsfsdfsdfds.png" alt="" class="banner">
+                <img src="./assets/img/iphone.png" alt="" class="slider__img">
+                <div class="slider__text">
+                    <div class="slider__title">Lorem Ipsum is simply </div>
+                    <div class="slider__info">dummy text of the <br>printing & typesetting </div>
+                    <div class="slider__btn">
+                        <a href="#" class="slider__link">Sign up now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+-->
+        
+    </section>
+    <section class="advantages" id="advantages">
+        <div class="container">
+        <ul class="advantages__list">
+            <li class="advantages__item">
+                <div class="advantages__pic">
+                    <img src="assets/img/icon/Shape%203.png" alt="" class="advantages__img">
+                </div>
+                <div class="advantages__text">
+                    <div class="advantages__title">Contrary to popular</div>
+                    <div class="advantages__info">Lorem Ipsum is not simply random text. It has roots in a piece </div>
+                </div>
+            </li>
+            <li class="advantages__item">
+                <div class="advantages__pic">
+                    <img src="assets/img/icon/Shape%205.png" alt="" class="advantages__img">
+                </div>
+                <div class="advantages__text">
+                    <div class="advantages__title">Contrary to popular</div>
+                    <div class="advantages__info">Lorem Ipsum is not simply random text. It has roots in a piece </div>
+                </div>
+            </li>
+            <li class="advantages__item">
+                <div class="advantages__pic">
+                    <img src="assets/img/icon/Shape%206.png" alt="" class="advantages__img">
+                </div>
+                <div class="advantages__text">
+                    <div class="advantages__title">Contrary to popular</div>
+                    <div class="advantages__info">Lorem Ipsum is not simply random text. It has roots in a piece </div>
+                </div>
+            </li>
+        </ul>
+        </div>
+    </section>
+    <section class="shoppingcart">
+        <div class="container">
+            <div class="shoppingcart__title">Shopping cart</div>
+            <div class="shoppingcart__contant">
+                <div class="shoppingcart__pic"><img src="assets/img/cart.png" alt="" class="shoppingcart__img"></div>
+                <div class="shoppingcart__text">
+                    <div class="shoppingcart__subtitle">Some Bullet text here</div>
+                    <ul class="info__list">
+                        <li class="info__item">Lorem Ipsum is simply dummy text of the printing and typesetting</li>
+                        <li class="info__item">Lorem Ipsum has been the industry's standard dummy text ever </li>
+                        <li class="info__item">When an unknown printer took a galley of type and scrambled </li>
+                        <li class="info__item">It to make a type specimen book. It has survived not only five centuries</li>
+                        <li class="info__item">But also the leap into electronic typesetting,</li>
+                        <li class="info__item">Remaining essentially unchanged. It was popularised</li>
+                        <li class="info__item">The release of Letraset sheets containing Lorem Ipsum passages</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="copyright">Copyright © 2012-2013 cssauthor.com</div>
+    </footer>
+<script src="assets/js/script.js"></script>
+<script src="assets/js/menu.js"></script>
 </body>
 </html>
